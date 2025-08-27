@@ -4,7 +4,7 @@ import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.domain.entity.PhotoDto
-import com.example.domain.usecase.GetFoodUseCase
+import com.example.domain.usecase.GetPhotoUseCase
 import com.example.domain.utils.DispatcherProvider
 import com.example.domain.utils.Resource
 import com.example.domain.utils.Result
@@ -19,7 +19,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class PhotoDetailsViewModel @Inject constructor(
-    private val getFoodUseCase: GetFoodUseCase,
+    private val getPhotoUseCase: GetPhotoUseCase,
     private val dispatcherProvider: DispatcherProvider
 ) :
     ViewModel() {
@@ -29,7 +29,7 @@ class PhotoDetailsViewModel @Inject constructor(
 
     fun getListOfFood() {
         viewModelScope.launch(dispatcherProvider.main) {
-            getFoodUseCase.invoke()
+            getPhotoUseCase.invoke()
                 .flowOn(dispatcherProvider.io)
                 .catch { _state.value = Resource.Error(it.message.toString()) }
                 .collect { response ->

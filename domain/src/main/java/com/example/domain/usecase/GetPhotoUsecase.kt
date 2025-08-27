@@ -6,7 +6,7 @@ import com.example.domain.utils.Result
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
-class GetFoodUseCase @Inject constructor(
+class GetPhotoUseCase @Inject constructor(
     private val photoRepository: PhotoRepository
 ) {
     suspend operator fun invoke(): Flow<Result<PhotoDto>> {
