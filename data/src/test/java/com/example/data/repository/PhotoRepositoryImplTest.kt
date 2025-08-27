@@ -17,7 +17,6 @@ import org.mockito.Mock
 import org.mockito.Mockito
 import org.mockito.MockitoAnnotations
 import org.mockito.junit.MockitoJUnitRunner
-import org.mockito.kotlin.any
 import retrofit2.HttpException
 import retrofit2.Response
 import com.example.domain.utils.Result
