@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">PhotoApp</string>
+    <string name="data_null">Data is null</string>
+    <string name="no_description">No description</string>
+</resources>
