@@ -14,7 +14,7 @@ By separating concerns into these distinct modules, the project achieves:
 - ✅ Easier scalability for adding new features or modules
 - ✅ Reactive and responsive UI powered by Kotlin Flow and Compose
 
-It contains 2 screens **list of photos** and **details of photo**.
+It contains 2 screens **list of photos** and **details of the selected photo**.
 
 **Screenshots** <br>
 <img width="280" height="550" alt="List_Screen_1" src="https://github.com/user-attachments/assets/fd65c6a0-edba-424a-a137-370da41ea53d" /> &nbsp; <img width="280" height="550" alt="List_Screen_2" src="https://github.com/user-attachments/assets/3328cf47-a20f-4e3c-a360-35e234d7a546" /> <br/><br/>
@@ -27,7 +27,7 @@ It contains 2 screens **list of photos** and **details of photo**.
 The tools I have used to gain the Android Clean Architecture are:
 
 - **Android Clean Architecture:** The Clean Architecture is a software design pattern that separates the business logic from the presentation layer. This makes the application more modular and easier to test.
-- **MVVM :** MVVM architecure is followed for the code boilerplate. Where View, ViewModel, Repisitory are clearly used for maintailed the SOLID principle.
+- **MVVM :** MVVM architecure is followed for the code boilerplate. Where Model ,View and ViewModel are clearly used to maintain the SOLID principle.
 - **Kotlin :** Kotlin is a modern programming language that is fully interoperable with Java. It is concise, expressive, and safe (https://kotlinlang.org/).
 - **Coroutine :** To reduce the main thread task we can divide the task in many thread asychronously using the Kotlin Coroutine using lifecycle scope (https://developer.android.com/kotlin/coroutines).
 - **Hilt :** Hilt is a dependency injection library that makes it easy to manage dependencies in Android applications.
