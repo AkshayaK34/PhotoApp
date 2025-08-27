@@ -39,9 +39,13 @@ import com.example.photoapp.ui.theme.topAppBarBackgroundColor
 import com.example.photoapp.ui.theme.topAppBarContentColor
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.style.TextAlign
 import com.example.photoapp.core.Constants.BACK
+import com.example.photoapp.core.Constants.ERROR
 import com.example.photoapp.core.Constants.NO_DESCRIPTION
 import com.example.photoapp.core.Constants.NULL_DATA
 import com.example.photoapp.core.Constants.PHOTO_APP
@@ -68,18 +72,21 @@ fun ListOfPhotoScreen(
         ) {
             when (val pageState = state) {
                 is Resource.Loading -> {
-                    //.....
+                    CircularProgressIndicator()
                 }
-
                 is Resource.Error -> {
+                    Text(
+                        text = pageState.message.toString() ?: ERROR,
+                        style = MaterialTheme.typography.h5,
+                        color = Color.Red,
+                        textAlign = TextAlign.Center
+                    )
                     Toast.makeText(
                         LocalContext.current,
                         pageState.message.toString(),
                         Toast.LENGTH_SHORT
-                    )
-                        .show()
+                    ).show()
                 }
-
                 is Resource.Success -> {
                     if (pageState.data != null) {
                         val foodItemList: List<PhotoDtoItem> = pageState.data!!

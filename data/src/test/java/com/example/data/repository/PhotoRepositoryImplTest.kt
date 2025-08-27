@@ -4,6 +4,7 @@ import com.example.data.TestDispatcherProvider
 import com.example.data.remote.ApiService
 import com.example.data.utils.NetworkBoundResource
 import com.example.domain.entity.PhotoDto
+import com.example.domain.entity.PhotoDtoItem
 import com.example.domain.utils.Constants
 import com.example.domain.utils.DispatcherProvider
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -43,7 +44,7 @@ class PhotoRepositoryImplTest {
     }
 
     @Test
-    fun `getPhotoDetails retun success`() {
+    fun getPhotoDetailsReturnSuccess() {
         runTest {
             Mockito.`when`(apiService.getPhotoDetails())
                 .thenAnswer { Response.success(photoDto) }
@@ -56,7 +57,7 @@ class PhotoRepositoryImplTest {
     }
 
     @Test
-    fun `getPhotoDetails return error`() {
+    fun getPhotoDetailsReturnError() {
         runTest {
             Mockito.`when`(apiService.getPhotoDetails())
                 .thenAnswer { Result.Error<PhotoDto>(message = "", code = 0) }
@@ -70,7 +71,7 @@ class PhotoRepositoryImplTest {
     }
 
     @Test
-    fun `getPhotoDetails return unknown error`() {
+    fun getPhotoDetailsReturnUnknownError() {
         runTest {
             Mockito.`when`(apiService.getPhotoDetails())
                 .thenReturn(Response.error(500, "".toResponseBody()))
@@ -85,7 +86,7 @@ class PhotoRepositoryImplTest {
     }
 
     @Test
-    fun `getPhotoDetails return http exception`() {
+    fun getPhotoDetailsReturnHttpException() {
         runTest {
             val httpException = Mockito.mock(HttpException::class.java)
             Mockito.`when`(apiService.getPhotoDetails())
@@ -105,7 +106,7 @@ class PhotoRepositoryImplTest {
     }
 
     @Test
-    fun `getPhotoDetails return socket exception`() {
+    fun getPhotoDetailsReturnSocketException() {
         runTest {
             val httpException = Mockito.mock(HttpException::class.java)
             Mockito.`when`(apiService.getPhotoDetails())
@@ -125,7 +126,7 @@ class PhotoRepositoryImplTest {
     }
 
     @Test
-    fun `getPhotoDetails return IO exception`() {
+    fun getPhotoDetailsReturnIOException() {
         runTest {
             val httpException = Mockito.mock(HttpException::class.java)
             Mockito.`when`(apiService.getPhotoDetails())

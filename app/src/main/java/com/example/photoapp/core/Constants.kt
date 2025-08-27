@@ -12,5 +12,6 @@ object Constants {
     const val BACK = "Back"
     const val PHOTO_APP = "Photo App"
     const val NULL_DATA = "Data is null"
+    const val ERROR = "Error"
 
 }

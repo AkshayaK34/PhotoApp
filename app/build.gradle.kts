@@ -81,6 +81,12 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
     implementation(libs.gson.v2101)
     implementation(libs.androidx.material)
+    testImplementation(libs.google.truth)
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.gsonconverter)
+    implementation(libs.okhHttp.core)
+    implementation(libs.okhHttp.interceptor)
+    implementation(libs.gson)
 
 
 }

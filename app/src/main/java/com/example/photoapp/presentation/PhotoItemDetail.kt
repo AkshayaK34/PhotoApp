@@ -70,8 +70,8 @@ fun PhotoItemDetail(photoDtoItem: PhotoDtoItem, navController: NavHostController
             )
             Spacer(Modifier.height(2.dp))
             val userDetails: String =
-                " $USERNAME : ${photoDtoItem.user.username} , $TOTAL_PHOTOS ${photoDtoItem.user.total_photos} " +
-                        ", $PROTFOLIO_URL ${photoDtoItem.user.portfolio_url} , ${photoDtoItem.user.links} "
+                " $USERNAME : ${photoDtoItem.user.username ?:""} , $TOTAL_PHOTOS ${photoDtoItem.user.total_photos ?: 0} " +
+                        ", $PROTFOLIO_URL ${photoDtoItem.user.portfolio_url ?:""} , ${photoDtoItem.user} "
             Text(
                 text = "$USER : ${userDetails ?: ""} ",
                 style = MaterialTheme.typography.bodyLarge

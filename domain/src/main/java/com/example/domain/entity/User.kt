@@ -9,8 +9,5 @@ data class User(
     val links: LinksX,
     val location: String,
     val portfolio_url: String,
-    val total_collections: Int,
-    val total_illustrations: Int,
-    val total_likes: Int,
     val total_photos: Int
 )

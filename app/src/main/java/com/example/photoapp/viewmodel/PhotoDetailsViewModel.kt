@@ -33,7 +33,7 @@ class PhotoDetailsViewModel @Inject constructor(
                 .flowOn(dispatcherProvider.io)
                 .catch { _state.value = Resource.Error(it.message.toString()) }
                 .collect { response ->
-                    Log.d("response", response.toString())
+                    //Log.d("response", response.toString())
                     when (response) {
                         is Result.Loading -> _state.value = Resource.Loading()
                         is Result.Error -> _state.value = Resource.Error(response.message)
