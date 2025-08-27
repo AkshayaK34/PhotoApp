@@ -57,7 +57,7 @@ fun ListOfPhotoScreen(
     navController: NavHostController
 ) {
     LaunchedEffect(key1 = Unit) {
-        viewModel.getListOfFood()
+        viewModel.getListOfPhoto()
     }
     val state by viewModel.state.collectAsState()
     Scaffold(

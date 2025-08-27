@@ -1,6 +1,5 @@
 package com.example.photoapp.viewmodel
 
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.domain.entity.PhotoDto
@@ -27,7 +26,7 @@ class PhotoDetailsViewModel @Inject constructor(
     private val _state = MutableStateFlow<Resource<PhotoDto>>(Resource.Loading())
     val state: StateFlow<Resource<PhotoDto>> get() = _state.asStateFlow()
 
-    fun getListOfFood() {
+    fun getListOfPhoto() {
         viewModelScope.launch(dispatcherProvider.main) {
             getPhotoUseCase.invoke()
                 .flowOn(dispatcherProvider.io)
