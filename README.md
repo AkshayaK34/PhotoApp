@@ -1,6 +1,6 @@
 **PhotoApp-Multi-Module-Android-Clean-Architecture-Jetpack-Compose-Kotlin-Hilt-Flow**
 <p align="justify">
-*_PhotoApp_* is a modern Android application built using Multi-Module Clean Architecture principles to ensure scalability, testability, and maintainability. It leverages the latest Android development tools and libraries, including Jetpack Compose for building a declarative and reactive UI, Kotlin Coroutines with Flow for managing asynchronous and reactive data streams, and Hilt for dependency injection
+PhotoApp is a modern Android application built using Multi-Module Clean Architecture principles to ensure scalability, testability, and maintainability. It leverages the latest Android development tools and libraries, including Jetpack Compose for building a declarative and reactive UI, Kotlin Coroutines with Flow for managing asynchronous and reactive data streams, and Hilt for dependency injection
 </p>
 
 The application follows a layered architecture divided into three core modules:
